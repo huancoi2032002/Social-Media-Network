@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #000;
+  font-family: var(--font-sans);
+}
+
+.styled-scrollbars {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+}
+
+.styled-scrollbars::-webkit-scrollbar {
+  width: 0;
+  /* Set the width of the scrollbar to 0 to hide it */
+}
+
+.styled-scrollbars:hover {
+  scrollbar-width: thin;
+  /* Firefox */
+  scrollbar-color: #3e4142 transparent;
+  /* Set scrollbar color for Firefox */
+}
+
+.styled-scrollbars:hover::-webkit-scrollbar {
+  width: 6px;
+  /* Show the scrollbar when hovering */
+}
+
+.styled-scrollbars:hover::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* Set the track color */
+}
+
+.styled-scrollbars:hover::-webkit-scrollbar-thumb {
+  background-color: #3e4142;
+  /* Set the thumb color */
+  border-radius: 8px;
+  /* Round the corners of the thumb */
+}
